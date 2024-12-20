@@ -1684,7 +1684,7 @@ hr {
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .section-padding2 {
     padding-top: 200px;
-    padding-bottom: 200px;
+    padding-bottom: 0px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -2482,14 +2482,14 @@ hr {
 
 .about-area .about-img .about-back-img img {
   border: 2px solid #f2f2f2;
-  height: auto;
   width: 100%;
+  height: auto;
   max-width: 750px;
   max-height: 500px;
 }
 
 /* Larger screens (e.g., desktops) */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) {
   .about-area .about-img .about-font-img img {
     width: 106%;
   }
@@ -2503,7 +2503,6 @@ hr {
 /* Medium screens (e.g., tablets) */
 @media only screen and (max-width: 991px) {
   .about-area .about-img .about-back-img img {
-    width: 100%;
     max-width: 650px;
     max-height: 400px;
   }
@@ -2516,7 +2515,6 @@ hr {
 /* Small screens (e.g., mobile) */
 @media only screen and (max-width: 575px) {
   .about-area .about-img .about-back-img img {
-    width: 100%;
     max-width: 600px;
     max-height: 350px;
   }
@@ -2527,11 +2525,16 @@ hr {
   }
 }
 
-/* Extra small screens */
+/* Extra small screens (e.g., very small mobile) */
 @media (max-width: 375px) {
   .about-area .about-img .about-back-img img {
     max-width: 500px;
     max-height: 300px;
+  }
+
+  .about-area .about-img .about-back-img {
+    top: 0;
+    right: 0;
   }
 }
 
@@ -3302,6 +3305,11 @@ hr {
 .team-area .single-team .team-caption:hover .team-social a {
   color: #fff;
   border: 1px solid #fff;
+}
+.team-area .section-padding {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
 }
 .single-team:hover .team-img img {
   transform: scale(1.05);
