@@ -172,11 +172,22 @@
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                             <div class="single-team mb-30">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/team2.png" alt="">
+                                    <img src="assets/img/gallery/team1.png" alt="">
                                 </div>
                                 <div class="team-caption">
                                     <h3><a href="#">HIS</a></h3>
-                                    <span>Streamlining Healthcare Operations with Smart Solutions</span>
+                                    <span>We offer a comprehensive Hospital Information Management System (HIMS) to streamline hospital workflows and improve patient care. Our solutions integrate outpatient, pharmacy, lab, and billing departments for seamless communication.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                            <div class="single-team mb-30">
+                                <div class="team-img">
+                                    <img src="assets/img/gallery/team2.png" alt="">
+                                </div>
+                                <div class="team-caption">
+                                    <h3><a href="#">Telehealth</a></h3>
+                                    <span>Efficient nurse alert systems that instantly notify healthcare professionals of patient needs, ensuring quick responses and improved care. Streamlining communication and enhancing patient safety. Our system also enables real-time tracking of patient status.</span>
                                 </div>
                             </div>
                         </div>
@@ -186,19 +197,8 @@
                                     <img src="assets/img/gallery/team3.png" alt="">
                                 </div>
                                 <div class="team-caption">
-                                    <h3><a href="#">Telehealth</a></h3>
-                                    <span>Efficient nurse alert systems that instantly notify healthcare professionals of patient needs, ensuring quick responses and improved care. Streamlining communication and enhancing patient safety</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                            <div class="single-team mb-30">
-                                <div class="team-img">
-                                    <img src="assets/img/gallery/team1.png" alt="">
-                                </div>
-                                <div class="team-caption">
-                                    <h3><a href="#">End to end Flow</a></h3>
-                                    <span></span>
+                                    <h3><a href="#">Workflow</a></h3>
+                                    <span>Our Workflow Management system optimizes hospital operations by automating and streamlining processes across departments. It ensures seamless coordination between teams, reducing manual tasks and improving efficiency.</span>
                                 </div>
                             </div>
                         </div>
@@ -260,16 +260,16 @@
 
     <div style="margin-top: 200px;">
 
-     <!--? Contact form Start -->
-     <div id = "appointment">
-     <div class="contact-form-main">
+     <!-- Contact form Start -->
+<div id="appointment">
+    <div class="contact-form-main">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-xl-7 col-lg-7">
                     <div class="form-wrapper">
-                        <!--Section Tittle  -->
+                        <!-- Section Title -->
                         <div class="form-tittle">
-                            <div class="row ">
+                            <div class="row">
                                 <div class="col-xl-12">
                                     <div class="section-tittle section-tittle2">
                                         <span>Book for a Demo</span>
@@ -278,8 +278,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!--End Section Tittle  -->
-                        <form id="contact-form" action="#" method="POST">
+                        <!-- End Section Title -->
+                        <form id="contact-form">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-box user-icon mb-30">
@@ -288,12 +288,12 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-box email-icon mb-30">
-                                        <textarea type="text" name="email" placeholder="Phone"></textarea>
+                                        <textarea type="text" name="phone" placeholder="Phone"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-box subject-icon mb-30">
-                                        <textarea type="Email" name="subject" placeholder="Email"></textarea>
+                                        <textarea type="email" name="email" placeholder="Email"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-lg-6.9">
@@ -301,7 +301,7 @@
                                         <textarea name="message" id="message" placeholder="Message"></textarea>
                                     </div>
                                     <div class="submit-info">
-                                        <button class="btn" type="submit">Submit Now <i class="ti-arrow-right"></i> </button>
+                                        <button class="btn" type="submit">Submit Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -310,12 +310,38 @@
                 </div>
             </div>
         </div>
-        <!-- contact left Img-->
+        <!-- Contact left Img -->
         <div class="from-left d-none d-lg-block">
             <img src="assets/img/gallery/contact_form.png" alt="">
         </div>
     </div>
     <!-- Contact form End -->
+</div>
+
+<script>
+    const form = document.getElementById('contact-form');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwKDFB4Zrm9TqdqGGQeKC85V7jJIKss6TflQv-tAMcok3IyxwAZgLDgrf08Gi4MwB4o/exec';
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();  // Prevent the form from submitting the traditional way
+        const formData = new FormData(form);  // Get the form data
+
+        // Send form data to Google Apps Script
+        fetch(scriptURL, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            alert("Form submitted successfully!");
+            form.reset();  // Reset the form after successful submission
+        })
+        .catch(error => {
+            alert("Error submitting form. Please try again.");
+        });
+    });
+</script>
+
+      <!--End of the contact demo page -->
     <!--? gallery Products Start -->
     <div class="gallery-area fix">
         <div class="container-fluid p-0">
@@ -491,10 +517,8 @@ Copyrights &copy;<script>document.write(new Date().getFullYear());</script> Bett
                         <div class="col-xl-3 col-lg-4">
                             <!-- Footer Social -->
                             <div class="footer-social f-right">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="bettercom.in"><i class="fas fa-globe"></i></a>
+                                <a href=""><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>

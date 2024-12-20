@@ -2820,6 +2820,10 @@ hr {
 	margin-top: -1px
 }
 
+.slider-area .hero__caption::after {
+	display: none;
+}
+
 .slider-area .hero__caption {
 	padding: 39px 70px 56px 68px;
 	margin-left: -25px;
@@ -2847,6 +2851,8 @@ hr {
 	animation: slide1 1s ease-in-out infinite;
 	margin-left: 0px
 }
+
+
 
 @keyframes slide1 {
 
