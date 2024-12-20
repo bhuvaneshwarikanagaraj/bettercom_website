@@ -2466,70 +2466,75 @@ hr {
 .about-area .about-img {
   position: relative;
 }
+
 .about-area .about-img .about-font-img {
   position: absolute;
   z-index: 0;
   left: 0;
 }
+
+.about-area .about-img .about-back-img {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  z-index: 0;
+}
+
+.about-area .about-img .about-back-img img {
+  border: 2px solid #f2f2f2;
+  height: auto;
+  width: 100%;
+  max-width: 750px;
+  max-height: 500px;
+}
+
+/* Larger screens (e.g., desktops) */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .about-area .about-img .about-font-img img {
     width: 106%;
   }
-}
-@media (max-width: 200px) {
-  .about-area .about-img .about-font-img img {
-    width: 100%;
-  }
-}
-.about-area .about-img .about-back-img {
-  position: absolute;
-  top: 10px;
-  right: -20px;
-  z-index: 0;
-}
-@media only screen and (min-width: 150px) and (max-width: 200px) {
-  .about-area .about-img .about-back-img {
-    right: -20px;
-  }
-}
-@media only screen and (min-width: 100px) and (max-width: 200px) {
-  .about-area .about-img .about-back-img {
-    right: -100px;
-  }
-}
-.about-area .about-img .about-back-img img {
-  border: 2px solid #f2f2f2;
-  height: 350px;
-    width: 550px;
-}
-@media (max-width: 200px) {
+
   .about-area .about-img .about-back-img img {
-    width: 45%;
-    height: 350px;
-    width: 550px;
+    max-width: 700px;
+    max-height: 450px;
   }
 }
-@media only screen and (min-width: 76px) and (max-width: 1px) {
+
+/* Medium screens (e.g., tablets) */
+@media only screen and (max-width: 991px) {
+  .about-area .about-img .about-back-img img {
+    width: 100%;
+    max-width: 650px;
+    max-height: 400px;
+  }
+
   .about-area .about-img .about-back-img {
-    position: unset;
-    height: 350px;
-    width: 550px;
+    right: -10px;
   }
 }
-@media only screen and (min-width: 100px) and (max-width: 200px) {
+
+/* Small screens (e.g., mobile) */
+@media only screen and (max-width: 575px) {
+  .about-area .about-img .about-back-img img {
+    width: 100%;
+    max-width: 600px;
+    max-height: 350px;
+  }
+
   .about-area .about-img .about-back-img {
-    position: unset;
-    height: 350px;
-    width: 550px;
+    top: 5px;
+    right: 0;
   }
 }
-@media (max-width: 200px) {
-  .about-area .about-img .about-back-img {
-    position: unset;height: 104px;
-    height: 500px;
-    width: 750px;
+
+/* Extra small screens */
+@media (max-width: 375px) {
+  .about-area .about-img .about-back-img img {
+    max-width: 500px;
+    max-height: 300px;
   }
 }
+
 @media (max-width: 575px) {
   .about-caption {
     margin-bottom: 35px;
